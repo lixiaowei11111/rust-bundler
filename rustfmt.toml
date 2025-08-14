@@ -1,0 +1,8 @@
+# Rustfmt configuration
+# See https://rust-lang.github.io/rustfmt/ for more options
+
+edition = "2024" 
+format_code_in_doc_comments = true # 格式化注释中的代码片段
+group_imports = "StdExternalCrate" # 控制顶部use声明语句的分组策略,默认不会进行分组,StdExternalCrate将导入分为三组——标准库、第三方库、本地模块，每组内按字母排序。
+imports_granularity = "Module" # 控制use声明时的粒度,默认为preserver是不会合并的,Module则会将同一个模块的use声明合并为一个语句
+style_edition = "2024"

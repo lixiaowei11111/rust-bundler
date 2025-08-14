@@ -1,0 +1,9 @@
+[workspace]
+members = ["crates/*", "xtask/*"]
+[package]
+edition = "2024"
+name = "rust-bundler"
+resolver = "3"
+version = "0.1.0"
+
+[dependencies]

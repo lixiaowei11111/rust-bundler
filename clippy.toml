@@ -1,0 +1,152 @@
+# Clippy configuration
+# See https://doc.rust-lang.org/clippy/configuration.html for more options
+
+# Lint levels
+msrv = "1.75.0"
+
+# Complexity lints
+large-type-threshold = 200
+too-many-arguments-threshold = 7
+too-many-lines-threshold = 100
+trivial-copy-size-limit = 128
+type-complexity-threshold = 60
+
+# Performance lints
+large-const-arrays-threshold = 512000
+large-enum-variant-threshold = 200
+large-stack-arrays-threshold = 512000
+pass-by-value-size-limit = 256
+vec-box-size-threshold = 4096
+
+# Style lints
+literal-representation-threshold = 10
+max-fn-params-bools = 3
+max-suggested-slice-pattern-length = 3
+single-char-binding-names-threshold = 4
+
+# Documentation lints
+doc-valid-idents = [
+  "TLS",
+  "SSL",
+  "HTTP",
+  "HTTPS",
+  "TCP",
+  "UDP",
+  "IP",
+  "URL",
+  "URI",
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "TypeScript",
+  "JSON",
+  "XML",
+  "YAML",
+  "TOML",
+  "CSV",
+  "SQL",
+  "NoSQL",
+  "CRUD",
+  "REST",
+  "API",
+  "CLI",
+  "GUI",
+  "UI",
+  "UX",
+  "OS",
+  "CPU",
+  "GPU",
+  "RAM",
+  "SSD",
+  "HDD",
+  "USB",
+  "WiFi",
+  "Bluetooth",
+  "GPS",
+  "OAuth",
+  "JWT",
+  "UUID",
+  "SHA",
+  "MD5",
+  "AES",
+  "RSA",
+  "HMAC",
+  "Base64",
+  "UTF",
+  "ASCII",
+  "ISO",
+  "RFC",
+  "W3C",
+  "IEEE",
+  "ANSI",
+  "POSIX",
+  "GNU",
+  "MIT",
+  "GPL",
+  "BSD",
+  "Apache",
+  "Mozilla",
+  "GitHub",
+  "GitLab",
+  "Docker",
+  "Kubernetes",
+  "AWS",
+  "GCP",
+  "Azure",
+  "CI",
+  "CD",
+  "DevOps",
+  "SaaS",
+  "PaaS",
+  "IaaS",
+  "CDN",
+  "DNS",
+  "VPN",
+  "SSH",
+  "FTP",
+  "SFTP",
+  "WebDAV",
+]
+
+# Blacklisted names (avoid using these as variable names)
+blacklisted-names = ["foo", "baz", "quux", "tmp"]
+
+# Arithmetic side effects
+arithmetic-side-effects-allowed = ["Size", "Offset"]
+
+# Avoid breaking exported API
+avoid-breaking-exported-api = true
+
+# Check private items
+check-private-items = false
+
+# Allow expect and unwrap in tests
+allow-expect-in-tests = true
+allow-unwrap-in-tests = true
+
+# Allow print macros in examples and main.rs
+allow-print-in-tests = true
+
+# Suppress lints for generated code
+suppress-restriction-lint-in-const = false
+
+# Standard library lints
+allow-mixed-uninlined-format-args = true
+cargo-ignore-publish = false
+
+# Enum variant names
+enum-variant-name-threshold = 3
+enum-variant-size-threshold = 200
+
+# Struct field names
+struct-excessive-bools = 3
+
+# Function names
+upper-case-acronyms-aggressive = false
+
+# Semicolon lints
+semicolon-if-nothing-returned = true
+semicolon-outside-block = true
+
+# Cognitive complexity
+cognitive-complexity-threshold = 25
