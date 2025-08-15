@@ -1,0 +1,9 @@
+[package]
+edition.workspace = true
+name = "bundler_resolver"
+version.workspace = true
+
+[dependencies]
+path-absolutize.workspace = true
+thiserror.workspace = true
+tokio.workspace = true

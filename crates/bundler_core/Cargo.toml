@@ -1,0 +1,26 @@
+[package]
+edition.workspace = true
+name = "bundler_core"
+version.workspace = true
+
+[features]
+default = []
+generate-types = []
+
+[dependencies]
+anyhow.workspace = true
+async-trait.workspace = true
+bundler_resolver = {path = "../bundler_resolver"}
+path-absolutize.workspace = true
+regex.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+swc_common.workspace = true
+swc_core.workspace = true
+thiserror.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+walkdir.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true

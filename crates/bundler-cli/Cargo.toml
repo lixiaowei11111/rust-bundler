@@ -1,0 +1,17 @@
+[package]
+edition.workspace = true
+name = "bundler-cli"
+version.workspace = true
+
+[[bin]]
+name = "rust-bundler"
+path = "src/main.rs"
+
+[dependencies]
+anyhow.workspace = true
+bundler_core = {path = "../bundler_core"}
+clap.workspace = true
+serde_json.workspace = true
+tokio.workspace = true
+tracing-subscriber.workspace = true
+tracing.workspace = true

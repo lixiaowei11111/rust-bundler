@@ -1,9 +1,44 @@
 [workspace]
-members = ["crates/*", "xtask/*"]
-[package]
+members = ["crates/*", "xtask"]
+resolver = "3"
+
+[workspace.package]
 edition = "2024"
 name = "rust-bundler"
-resolver = "3"
 version = "0.1.0"
 
-[dependencies]
+[workspace.dependencies]
+# cargo貌似对workspaces的支持有点问题，不支持使用命令行来和pnpm一样使用-w之类的命令来添加全局公共依赖到workspace.dependencies下面，只能手动添加
+# 不知道那些开源项目是怎么解决的。相关issue，https://github.com/rust-lang/cargo/issues/10608
+
+# Core dependencies
+anyhow = "1.0.99"
+async-trait = "0.1.89"
+serde = {version = "1.0.219", features = ["derive"]}
+serde_json = "1.0.142"
+swc_common = "14.0.2"
+swc_core = "35.0.0"
+thiserror = "2.0.14"
+tokio = {version = "1.47.1", features = ["full"]}
+
+#File System
+glob = "0.3.3"
+walkdir = "2.5.0"
+
+# Path handling
+path-absolutize = "3.1.1"
+pathdiff = "0.2.3"
+
+# String processing
+regex = "1.11.1"
+
+#CLI
+clap = {version = "4.5.45", features = ["derive"]}
+
+#logging
+tracing = "0.1.41"
+tracing-subscriber = {version = "0.3.19", features = ["env-filter"]}
+
+#Testing
+criterion = "0.7.0"
+tempfile = "3.20.0"
